@@ -145,8 +145,8 @@ const promptEngineer = () => {
             type: 'input',
             name: 'githubUsername',
             message: 'What is the Egineer GitHub Username?',
-            validate: githubUsername => {
-                if (githubUsername) {
+            validate: gitHub => {
+                if (gitHub) {
                     return true;                
                 } else {
                     console.log('Input required, please enter the Engineer GitHub Username');
@@ -156,7 +156,7 @@ const promptEngineer = () => {
         },
     ]).then(answers => {
         console.log(answers);
-        const engineer = new Engineer(answers.name, answers.employeeId, answers.email, answers.githubUsername);
+        const engineer = new Engineer(answers.name, answers.employeeId, answers.email, answers.gitHub);
         teamMembers.push(engineer);
         //after entering engineer, it would go back to original promptMenu to select the next person
         promptMenu();
@@ -164,5 +164,66 @@ const promptEngineer = () => {
 };
 
 //if intern is selected:
-
+const promptIntern = () => {
+    console.log('Add an Intern');
+    return inquirer.promt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is the Intern name?',
+            validate: name => {
+                if (name) {
+                    return true;                
+                } else {
+                    console.log('Input required, please enter the Intern name');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'employeeId',
+            message: 'What is the Intern employee ID?',
+            validate: employeeId => {
+                if (employeeId) {
+                    return true;                
+                } else {
+                    console.log('Input required, please enter the Intern employee ID');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is the Intern Email address?',
+            validate: email => {
+                if (email) {
+                    return true;                
+                } else {
+                    console.log('Input required, please enter the Intern Email address');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: 'What is the Intern school name?',
+            validate: school => {
+                if (school) {
+                    return true;                
+                } else {
+                    console.log('Input required, please enter the Intern school name');
+                    return false;
+                }
+            }
+        },
+    ]).then(answers => {
+        console.log(answers);
+        const intern = new Intern(answers.name, answers.employeeId, answers.email, answers.school);
+        teamMembers.push(intern);
+        promptMenu();
+    })
+};
 
