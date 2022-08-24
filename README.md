@@ -34,17 +34,17 @@ THEN I exit the application, and the HTML is generated
 
 
 ## Screenshot:
-  
+<img src="./dist/img/TeamGenPic.png">
 
 ## Deployment:
 My HTML Generator Walk-through Video Link:
-* https://drive.google.com/file/d/1IEoLIXITbBWJ6n8Sk_W-nGyf8awzt6x1/view
+* https://drive.google.com/file/d/17uRBnJO14J1VgZ2z_ASr26p10o5pFBo_/view
 
 My repo link:
 * https://github.com/meriem0319/Team-Profile-Generator
 
 Generated HTML Example Link:
-* file:///C:/Users/merie/Documents/Weekly%20Challenges/OOP%20-%2010/Team-Profile-Generator/output/team.html
+* https://meriem0319.github.io/Team-Profile-Generator/
 
 ## 📜 Author
 * Meriem Powell
