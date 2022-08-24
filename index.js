@@ -82,14 +82,14 @@ const promptMenu = () => {
             type: 'list',
             name: 'menu',
             message: 'What would you like to do next?',
-            choices: ['Add an engineer', 'Add an intern', 'Finish building team']
+            choices: ['Add an Engineer', 'Add an Intern', 'Finish building team']
         }])
         .then(userChoice => {
             switch (userChoice.menu) {
                 case 'Add an Intern':
                     promptIntern();
                     break;
-                case 'Add an engineer':
+                case 'Add an Engineer':
                     promptEngineer();
                     break;                
                 case 'Finish building team':
@@ -166,7 +166,7 @@ const promptEngineer = () => {
 //if intern is selected:
 const promptIntern = () => {
     console.log('Add an Intern');
-    return inquirer.promt([
+    return inquirer.prompt([
         {
             type: 'input',
             name: 'name',
