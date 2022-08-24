@@ -65,7 +65,7 @@ const promptManager = () => {
                     return false;
                 }
             }
-        },
+        }
     ]).then(answers => {
         console.log(answers);
         const manager = new Manager(answers.name, answers.employeeId, answers.email, answers.officeNumber);
@@ -82,25 +82,25 @@ const promptMenu = () => {
             type: 'list',
             name: 'menu',
             message: 'What would you like to do next?',
-            choices: ['Add an engineer', 'Add an intern', 'Finish building team']  
+            choices: ['Add an engineer', 'Add an intern', 'Finish building team']
         }])
         .then(userChoice => {
-        switch (userChoice.menu) {
-            case 'Add an engineer':
-                promptEngineer();
-                break;
-            case 'Add an Intern':
-                promptIntern();
-                break;
-            default:
-                buildTeam();
-        }
-    });
+            switch (userChoice.menu) {
+                case 'Add an Intern':
+                    promptIntern();
+                    break;
+                case 'Add an engineer':
+                    promptEngineer();
+                    break;                
+                case 'Finish building team':
+                    buildTeam();
+            };
+        })
 };
 
 //if engineer is selected:
 const promptEngineer = () => {
-    console.log('%cAdd an Engineer', 'color: green; background: yellow; font-size: 30px');
+    console.log('Add an Engineer');
     return inquirer.prompt([
         {
             type: 'input',
@@ -143,7 +143,7 @@ const promptEngineer = () => {
         },
         {
             type: 'input',
-            name: 'githubUsername',
+            name: 'gitHub',
             message: 'What is the Egineer GitHub Username?',
             validate: gitHub => {
                 if (gitHub) {
@@ -153,7 +153,7 @@ const promptEngineer = () => {
                     return false;
                 }
             }
-        },
+        }
     ]).then(answers => {
         console.log(answers);
         const engineer = new Engineer(answers.name, answers.employeeId, answers.email, answers.gitHub);
@@ -165,7 +165,7 @@ const promptEngineer = () => {
 
 //if intern is selected:
 const promptIntern = () => {
-    console.log('$cAdd an Intern', 'color: green; background: yellow; font-size: 30px');
+    console.log('Add an Intern');
     return inquirer.promt([
         {
             type: 'input',
@@ -218,7 +218,7 @@ const promptIntern = () => {
                     return false;
                 }
             }
-        },
+        }
     ]).then(answers => {
         console.log(answers);
         const intern = new Intern(answers.name, answers.employeeId, answers.email, answers.school);
@@ -228,7 +228,7 @@ const promptIntern = () => {
 };
 
 const buildTeam = () => {
-    console.log('%cFinished building team!', 'color: black; background: red; font-size: 30px');
+    console.log('Finished building team!');
     if (!fs.existsSync(OUTPUT_DIR)) {
         fs.mkdirSync(OUTPUT_DIR)
     }
