@@ -83,8 +83,8 @@ const promptMenu = () => {
             name: 'menu',
             message: 'What would you like to do next?',
             choices: ['Add an engineer', 'Add an intern', 'Finish building team']  
-        },
-    ]).then(userChoice => {
+        }])
+        .then(userChoice => {
         switch (userChoice.menu) {
             case 'Add an engineer':
                 promptEngineer();
@@ -100,14 +100,14 @@ const promptMenu = () => {
 
 //if engineer is selected:
 const promptEngineer = () => {
-    console.log('Add an Engineer');
+    console.log('%cAdd an Engineer', 'color: green; background: yellow; font-size: 30px');
     return inquirer.prompt([
         {
             type: 'input',
             name: 'name',
             message: 'What is the Engineer name?',
-            validate: name => {
-                if (name) {
+            validate: engineerName => {
+                if (engineerName) {
                     return true;                
                 } else {
                     console.log('Input required, please enter the Engineer name');
@@ -165,14 +165,14 @@ const promptEngineer = () => {
 
 //if intern is selected:
 const promptIntern = () => {
-    console.log('Add an Intern');
+    console.log('$cAdd an Intern', 'color: green; background: yellow; font-size: 30px');
     return inquirer.promt([
         {
             type: 'input',
             name: 'name',
             message: 'What is the Intern name?',
-            validate: name => {
-                if (name) {
+            validate: internName => {
+                if (internName) {
                     return true;                
                 } else {
                     console.log('Input required, please enter the Intern name');
@@ -228,10 +228,9 @@ const promptIntern = () => {
 };
 
 const buildTeam = () => {
-    console.log('Finished building team!');
+    console.log('%cFinished building team!', 'color: black; background: red; font-size: 30px');
     if (!fs.existsSync(OUTPUT_DIR)) {
         fs.mkdirSync(OUTPUT_DIR)
-
     }
     fs.writeFileSync(outputPath, renderSite(teamMembers), 'utf-8');
 }
