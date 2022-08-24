@@ -38,13 +38,13 @@ THEN I exit the application, and the HTML is generated
 
 ## Deployment:
 My HTML Generator Walk-through Video Link:
-* 
+* https://drive.google.com/file/d/1IEoLIXITbBWJ6n8Sk_W-nGyf8awzt6x1/view
 
 My repo link:
-* 
+* https://github.com/meriem0319/Team-Profile-Generator
 
 Generated HTML Example Link:
-* 
+* file:///C:/Users/merie/Documents/Weekly%20Challenges/OOP%20-%2010/Team-Profile-Generator/output/team.html
 
 ## 📜 Author
 * Meriem Powell
