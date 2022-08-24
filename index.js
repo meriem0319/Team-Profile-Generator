@@ -131,7 +131,7 @@ const promptEngineer = () => {
         {
             type: 'input',
             name: 'email',
-            message: 'What is the Egineer email address?',
+            message: 'What is the Engineer email address?',
             validate: email => {
                 if (email) {
                     return true;                

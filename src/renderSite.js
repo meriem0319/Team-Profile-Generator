@@ -90,7 +90,7 @@ module.exports = team => {
         </header>
         
         <main>
-        ${generateTeam(team)}
+        ${renderSite(team)}
         </main>
     
     </body>

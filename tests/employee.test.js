@@ -13,18 +13,18 @@ test('getting the constructor values fr the employee object', () => {
 //testing each method
 
 test('getting name from getName()', () => {
-    expect(employee.getName().toBe('Meme'));
+    expect(employee.getName()).toBe('Meme');
 })
 
 test('getting id from getId()', () => {
-    expect(employee.getId().toBe('565656'));
+    expect(employee.getId()).toBe('565656');
 })
 
 test('getting email from getEmail()', () => {
-    expect(employee.getEmail().toBe('meme@meme.com'));
+    expect(employee.getEmail()).toBe('meme@meme.com');
 })
 
 test('getting Employee from getRole()', () => {
-    expect(employee.getRole().toBe('Employee'));
+    expect(employee.getRole()).toBe('Employee');
 })
 
