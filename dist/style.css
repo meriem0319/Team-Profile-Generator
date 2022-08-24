@@ -1,11 +1,13 @@
 header {
-    background-color: beige;
-    color: blue;
-    font-size: 32px;
+    background-image: url("img/comp.jpg");
+    background-color: none;
+    color: whitesmoke;
+    font-size: 48px;
+    font-weight: 900;
     padding: 5px;
     display: flex;
     justify-content: center;
-    margin: 10px;
+    margin: 24px;
 }
 
 main {
@@ -15,21 +17,26 @@ main {
     flex-wrap: wrap;
 }
 
-.card-header {
-    color: black;
-    background-color: blanchedalmond;
-}
-
 .card {
-    padding: 5px;
-    margin: 10px;
+    background-color: aliceblue;
+    padding: 10px;
+    margin: 15px;
 }
 
-.list-group {
-    color: blue;
+.card-title {
+    color: black;
+    background-color: rgb(187, 230, 243);
+    border: 2px solid DodgerBlue;
 }
 
-.list-group-item {
-    overflow: visible;    
+.card-text {
+    font-size: smaller;
 }
 
+:hover.card-link {
+    cursor: pointer;     
+}
+
+.card-link {
+    font-size: smaller;
+}

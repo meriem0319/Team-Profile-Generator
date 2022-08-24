@@ -13,7 +13,7 @@ const renderSite = (team) => {
                 <h5 class="card-title">${manager.name}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Manager</h6>
                 <p class="card-text">ID: ${manager.id}</p>
-                <a href="mailto:${manager.email}" class="card-link">${manager.email}</a>
+                <p><a href="mailto:${manager.email}" class="card-link">${manager.email}</a></p>
                 <p class="card-text">Office Number: ${manager.officeNumber}</p>
             </div>
         </div>
@@ -28,7 +28,7 @@ const renderSite = (team) => {
                 <h5 class="card-title">${engineer.name}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Engineer</h6>
                 <p class="card-text">ID: ${engineer.id}</p>
-                <a href="mailto:${engineer.email}" class="card-link">${engineer.email}</a>
+                <p><a href="mailto:${engineer.email}" class="card-link">${engineer.email}</a></p>
                 <p class="card-text">Github Username: <a target="_blank" href="https://github.com/${engineer.gitHub}">${engineer.gitHub}</a></p>
             </div>
         </div>
@@ -43,7 +43,7 @@ const renderSite = (team) => {
                 <h5 class="card-title">${intern.name}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Intern</h6>
                 <p class="card-text">ID: ${intern.id}</p>
-                <a href="mailto:${intern.email}" class="card-link">${intern.email}</a>
+                <p><a href="mailto:${intern.email}" class="card-link">${intern.email}</a></p>
                 <p class="card-text">School: ${intern.school}</p>
             </div>
         </div>
@@ -77,7 +77,7 @@ module.exports = team => {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="/dist/style.css"/>
+        <link rel="stylesheet" href="../dist/style.css"/>
         <title>Team Profile Generator</title>
     </head>
     <body>
